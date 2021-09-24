@@ -1,0 +1,19 @@
+.result-title {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 2.5rem;
+    padding-bottom: 10%;
+}
+.result-name {
+    text-align: center;
+}
+.notfound-btn {
+    margin-top: 15%;
+    margin-bottom: 25%;
+    text-align: center;
+}
+
+.asterisk {
+    color: grey;
+    font-size: 0.8rem;
+}

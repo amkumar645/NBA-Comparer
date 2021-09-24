@@ -1,0 +1,13 @@
+<div *ngIf="!reloadForm">
+    <h1 class="notfound-title">Player Not Found</h1>
+    <div class="notfound-btn">
+        <button class="btn btn-primary btn-lg" (click)="onReloadForm()">Try Again</button>
+    </div>
+    
+</div>
+<div *ngIf="reloadForm">
+    <!-- <h1 class= "find-title">Find a player</h1> -->
+    <app-player-form [playerNumber]="playerNumber"></app-player-form>
+</div>
+
+

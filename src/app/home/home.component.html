@@ -1,0 +1,51 @@
+<div class="home-page">
+    <h1 class="home-text"><mark>Compare your favorite players in seconds</mark></h1>
+    <div class="home-btn">
+        <button class="home-btn-2" (click)="scroll(other)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg></button>
+    </div>
+</div>
+<div #other class="other-pages">
+    <div class="row">
+        <div class="column">
+            <h3 class = "column-title">About Section</h3>
+            <p class="column-text">See in-depth descriptions of the different features available on the site, including 
+                the player comparer, adjusted statistic comparer, and historical statistics page.
+            </p>
+            <div class="column-btn">
+                <button class="btn btn-primary btn-md" routerLink="/about">
+                    To About Page
+                </button>
+            </div>
+            
+        </div>
+        <div class="column">
+            <h3 class = "column-title">Comparer Section</h3>
+            <p class="column-text">
+                Compare the statistics of any two individual seasons of any two 
+                NBA players ranging back to 1950! You can even look at adjusted statistics based on time period.
+            </p>
+            <div class="column-btn">
+                <button class="btn btn-primary btn-md" routerLink="/nba">
+                    To Comparer Page
+                </button>
+            </div>
+        </div>
+        <div class="column">
+            <h3 class = "column-title">Historical Section</h3>
+            <p class="column-text">
+                Look at the statistics for any NBA season since 1950 and use the table
+                sorting feature to see league leaders in any statistical category you want.
+            </p>
+            <div class="column-btn">
+                <button class="btn btn-primary btn-md" routerLink="/nba">
+                    To Historical Page
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <h1 class="contact-text">Questions?</h1>
+    </div>
+</div>

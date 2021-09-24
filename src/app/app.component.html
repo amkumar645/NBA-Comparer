@@ -1,0 +1,21 @@
+<nav class="header navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink=""><img class="icon" src="assets/pc-logo-circle.png" style="display: inline-block;">NBA Comparer</a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" routerLink="about">About</a>
+        <a class="nav-link active" routerLink="nba">Comparer</a>
+        <a class="nav-link active" routerLink="past">Historical</a>
+        <a class="nav-link disabled" href="future" tabindex="-1" aria-disabled="true">Prediction</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<div class="footer bg-dark">
+  <p>NBA Comparer 2021</p>
+  <p>Data last updated February 17, 2021</p>
+</div>

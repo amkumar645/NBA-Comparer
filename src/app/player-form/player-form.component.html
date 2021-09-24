@@ -1,0 +1,31 @@
+<div *ngIf="!submitted">
+    <h1 class= "find-title">{{title}}</h1>
+    <form autocomplete="off" [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field class="form-group">
+                <label for="playerName">Player Name</label>
+                <input
+                id="playerName"
+                matInput
+                type="text"
+                class="form-control"
+                [matAutocomplete]="auto"
+                formControlName="playerName"
+                [class.invalid]="!playerForm.get('playerName')?.valid  && playerForm.get('playerName')?.touched"   
+                >
+                <mat-autocomplete class="autocomplete-total" #auto="matAutocomplete">
+                    <mat-option class="autocomplete-items" *ngFor="let option of filteredOptions | async" [value]="option.name">
+                      {{option.name}}, {{option.years[0]}} - {{option.years[option.years.length - 1]}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+        <p *ngIf="!playerForm.get('playerName')?.valid && playerForm.get('playerName')?.touched">
+            <span *ngIf="playerForm.get('playerName')?.errors!['required']" class="errorMsg">* Please enter a player name</span>     
+         </p>
+        <button [disabled]="!playerForm.valid" class="btn btn-primary btn-lg"  type="submit">Search</button>
+    </form>
+</div>
+
+<app-result *ngIf="submitted && playerExists" [playerNumber]="playerNumber"></app-result>
+<app-player-not-found *ngIf="submitted && !playerExists" [playerNumber]="playerNumber"></app-player-not-found>

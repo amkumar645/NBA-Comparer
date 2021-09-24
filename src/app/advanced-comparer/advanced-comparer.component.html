@@ -1,0 +1,141 @@
+<div class="row">
+    <div class="column column1 col-xs-12 col-md-6">
+      <div class="card card1 mx-auto" style="width: 18rem;">
+          <img class="card-img-top player-img" src={{player1.imgSrc}} alt="Not Found" onerror="this.src='/assets/no_img.png'">
+          <div class="card-body">
+            <h5 class="card-title">{{player1.name}}</h5>
+            <p class="card-text">{{checkTeamName(player1.team)}}, {{player1.year}}</p>
+            <p class="card-text">Age: {{player1.age}}</p>
+            <p class="card-text">Games played: {{player1.gp}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Points per game: {{adjust('ppg', player1.year, 1).toFixed(1)}} 
+              <span *ngIf="compare('ppg') === 1">&#9989;</span>
+              <span *ngIf="compare('ppg') === 2">&#10060;</span>
+              <span *ngIf="compare('ppg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Assists per game: {{adjust('apg', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('apg') === 1">&#9989;</span>
+              <span *ngIf="compare('apg') === 2">&#10060;</span>
+              <span *ngIf="compare('apg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Rebounds per game: {{adjust('rpg', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('rpg') === 1">&#9989;</span>
+              <span *ngIf="compare('rpg') === 2">&#10060;</span>
+              <span *ngIf="compare('rpg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Steals per game: {{adjust('spg', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('spg') === 1">&#9989;</span>
+              <span *ngIf="compare('spg') === 2">&#10060;</span>
+              <span *ngIf="compare('spg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Blocks per game: {{adjust('bpg', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('bpg') === 1">&#9989;</span>
+              <span *ngIf="compare('bpg') === 2">&#10060;</span>
+              <span *ngIf="compare('bpg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Turnovers per game: {{adjust('tpg', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('tpg') === 2">&#9989;</span>
+              <span *ngIf="compare('tpg') === 1">&#10060;</span>
+              <span *ngIf="compare('tpg') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Player Efficiency Rating: {{adjust('per', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('per') === 1">&#9989;</span>
+              <span *ngIf="compare('per') === 2">&#10060;</span>
+              <span *ngIf="compare('per') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Win Shares: {{adjust('ws', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('ws') === 1">&#9989;</span>
+              <span *ngIf="compare('ws') === 2">&#10060;</span>
+              <span *ngIf="compare('ws') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Box Plus-Minus: {{adjust('bpm', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('bpm') === 1">&#9989;</span>
+              <span *ngIf="compare('bpm') === 2">&#10060;</span>
+              <span *ngIf="compare('bpm') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Value Over Replacement Player: {{adjust('vorp', player1.year, 1).toFixed(1)}}
+              <span *ngIf="compare('vorp') === 1">&#9989;</span>
+              <span *ngIf="compare('vorp') === 2">&#10060;</span>
+              <span *ngIf="compare('vorp') === 3">&#10134;</span>
+            </li>
+          </ul>
+          <div class="card-body">
+            <a *ngIf="!advanced" class="card-link" (click)="onAdvanced()">Show advanced</a>
+            <a *ngIf="advanced" class="card-link" (click)="onAdvanced()">Show less</a>
+          </div>
+        </div>
+  </div>
+  <div class="column column2 col-xs-12 col-md-6">
+      <div class="card card2 mx-auto" style="width: 18rem;">
+          <img class="card-img-top player-img" src={{player2.imgSrc}} alt="Not Found" onerror="this.src='/assets/no_img.png'">
+          <div class="card-body">
+            <h5 class="card-title">{{player2.name}}</h5>
+            <p class="card-text">{{checkTeamName(player2.team)}}, {{player2.year}}</p>
+            <p class="card-text">Age: {{player2.age}}</p>
+            <p class="card-text">Games played: {{player2.gp}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Points per game: {{adjust('ppg', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('ppg') === 2">&#9989;</span>
+              <span *ngIf="compare('ppg') === 1">&#10060;</span>
+              <span *ngIf="compare('ppg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Assists per game: {{adjust('apg', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('apg') === 2">&#9989;</span>
+              <span *ngIf="compare('apg') === 1">&#10060;</span>
+              <span *ngIf="compare('apg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Rebounds per game: {{adjust('rpg', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('rpg') === 2">&#9989;</span>
+              <span *ngIf="compare('rpg') === 1">&#10060;</span>
+              <span *ngIf="compare('rpg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Steals per game: {{adjust('spg', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('spg') === 2">&#9989;</span>
+              <span *ngIf="compare('spg') === 1">&#10060;</span>
+              <span *ngIf="compare('spg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Blocks per game: {{adjust('bpg', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('bpg') === 2">&#9989;</span>
+              <span *ngIf="compare('bpg') === 1">&#10060;</span>
+              <span *ngIf="compare('bpg') === 3">&#10134;</span>
+            </li>
+            <li class="list-group-item">Turnovers per game: {{adjust('tpg', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('tpg') === 1">&#9989;</span>
+              <span *ngIf="compare('tpg') === 2">&#10060;</span>
+              <span *ngIf="compare('tpg') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Player Efficiency Rating: {{adjust('per', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('per') === 2">&#9989;</span>
+              <span *ngIf="compare('per') === 1">&#10060;</span>
+              <span *ngIf="compare('per') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Win Shares: {{adjust('ws', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('ws') === 2">&#9989;</span>
+              <span *ngIf="compare('ws') === 1">&#10060;</span>
+              <span *ngIf="compare('ws') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Box Plus-Minus: {{adjust('bpm', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('bpm') === 2">&#9989;</span>
+              <span *ngIf="compare('bpm') === 1">&#10060;</span>
+              <span *ngIf="compare('bpm') === 3">&#10134;</span>
+            </li>
+            <li *ngIf="advanced" class="list-group-item">Value Over Replacement Player: {{adjust('vorp', player2.year, 2).toFixed(1)}}
+              <span *ngIf="compare('vorp') === 2">&#9989;</span>
+              <span *ngIf="compare('vorp') === 1">&#10060;</span>
+              <span *ngIf="compare('vorp') === 3">&#10134;</span>
+            </li>
+          </ul>
+          <div class="card-body">
+              <a *ngIf="!advanced" class="card-link" (click)="onAdvanced()">Show advanced</a>
+              <a *ngIf="advanced" class="card-link" (click)="onAdvanced()">Show less</a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary btn-lg compare-btn" (click)="onRefresh()">Restart</button>
+  </div> 
+  
+  

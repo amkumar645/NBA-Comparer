@@ -1,0 +1,16 @@
+<div *ngIf="!comparingTime">
+    <div class="row">
+        <div class="column column1 col-xs-12 col-md-6">
+            <app-player-form [playerNumber]="player1"></app-player-form>
+        </div>
+        <div class="column column2 col-xs-12 col-md-6">
+            <app-player-form [playerNumber]="player2"></app-player-form>
+        </div>
+    </div>
+    <div class="compare-btn">
+        <button [disabled]="!isReady" class="btn btn-primary btn-lg" (click)="onCompare()">Compare</button>
+    </div> 
+</div>
+<div *ngIf="comparingTime">
+    <app-total-comparer></app-total-comparer>
+</div>

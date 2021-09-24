@@ -1,0 +1,65 @@
+.column1 {
+    float: left;
+    width: 35%;
+}
+
+.column2 {
+    float: left;
+    width: 65%;
+}
+
+.feature {
+    background-color:#39A2DB;
+    height: 55%;
+}
+
+.img-1 {
+    margin-left: 40%;
+    margin-top: 15%;    
+    height:17%;
+}
+
+.img-2 {
+    margin-right: 40%;
+    margin-top: 15%;    
+    height: 40%;
+}
+
+.img-3 {
+    margin-left: 40%;
+    margin-top: 15%;    
+    height:20%;
+
+}
+
+.img-4 {
+    margin-right: 40%;
+    margin-top: 15%;    
+    height:40%;
+}
+
+.section-text {
+    margin-bottom: 7%;
+    font-weight: normal;
+    margin-left: 15%;
+    margin-right: 5%;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.section-title {
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.white {
+    background-color: white;
+}
+
+.white-text {
+    color: #ecebe5;
+}
+

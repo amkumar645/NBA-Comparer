@@ -1,0 +1,35 @@
+
+.drop {
+    margin-bottom: 5%;
+    margin-left: 75%;
+}
+
+.dropdown {
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+
+.mat-row:nth-child(even){
+    background-color: white;
+}
+        
+.mat-row:nth-child(odd){
+    background-color: lightgrey;
+}
+
+.nbaTable {
+    margin-top: 3%;
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.title {
+    text-align: left;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    margin-left: 2%;
+}

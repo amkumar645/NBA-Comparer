@@ -1,0 +1,15 @@
+<div *ngIf="!reloadForm">
+    <h1 class="result-title">Chosen Player</h1>
+    <p class="result-name">Player Name: {{player.name}} </p>
+    <p class="result-name">Seasons: {{player.years[0]}} - {{player.years[player.years.length-1]}}</p>
+    <div class="notfound-btn">
+        <button class="btn btn-primary btn-lg" (click)="onReloadForm()">Pick Again</button>    
+    </div>
+    <p class="asterisk" *ngIf="player.name.substring(player.name.length - 1) == '*'">
+        * indicates player is in Hall of Fame
+    </p>
+</div>
+<div *ngIf="reloadForm">
+    <!-- <h1 class= "find-title">Find a player</h1> -->
+    <app-player-form [playerNumber]="playerNumber"></app-player-form>
+</div>

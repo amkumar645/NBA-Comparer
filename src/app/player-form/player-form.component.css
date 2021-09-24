@@ -1,0 +1,64 @@
+.form-group {
+    padding-bottom: 5%;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+  }
+.autocomplete-total {
+    margin-bottom: 50px;
+}
+.autocomplete-items {
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    background-color: white;
+}
+.autocomplete-items:hover {
+    color: white;
+    background-color: dodgerblue;
+}
+/* .btn-autocomplete {
+    margin-top: 55%;
+    margin-bottom: 25%;
+    margin-left: 45%;
+    position: relative;
+} */
+.btn {
+    margin-top: 15%;
+    margin-bottom: 25%;
+    margin-left: 45%;
+    position: relative;
+}
+.season-ctrl {
+    width: 30%;
+}
+.errorMsg {
+    color: red;
+}
+.invalid {
+    border-color: red;
+}
+.find-title {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 2.5rem;
+    padding-bottom: 10%;
+}
+.mat-autocomplete-panel { 
+    position: absolute;
+    bottom: 100px;
+    
+  }  

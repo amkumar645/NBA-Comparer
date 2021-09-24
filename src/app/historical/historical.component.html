@@ -1,0 +1,130 @@
+<div class="dropdown">
+      <span class = "title">Past Seasons</span>
+      <span class="drop">
+        <select name="year" id="year" [(ngModel)]="currentYear" (change)="chooseDataSource(currentYear - 1950)">
+          <option *ngFor="let year of years">{{year}}</option>
+        </select>
+      </span>
+      
+</div>
+
+<div class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" matSort matSortStart="desc" class="mat-elevation-z8" class="nbaTable">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="team">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Team </th>
+        <td mat-cell *matCellDef="let element"> {{element.team}} </td>
+      </ng-container>
+  
+    <ng-container matColumnDef="year">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Year </th>
+      <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="gp">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> GP </th>
+      <td mat-cell *matCellDef="let element"> {{element.gp}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="ppg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> PPG </th>
+      <td mat-cell *matCellDef="let element"> {{element.ppg}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="apg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> APG </th>
+      <td mat-cell *matCellDef="let element"> {{element.apg}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rpg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> RPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.rpg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="orbg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ORPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.orbg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="drbg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DRPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.drbg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="spg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> SPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.spg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="bpg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> BPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.bpg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tpg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> TPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.tpg}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="fpg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> FPG </th>
+        <td mat-cell *matCellDef="let element"> {{element.fpg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="per">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> PER </th>
+        <td mat-cell *matCellDef="let element"> {{element.per}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ows">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> OWS </th>
+        <td mat-cell *matCellDef="let element"> {{element.ows}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dws">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DWS </th>
+        <td mat-cell *matCellDef="let element"> {{element.dws}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ws">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> WS </th>
+        <td mat-cell *matCellDef="let element"> {{element.ws}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="obpm">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> OBPM </th>
+        <td mat-cell *matCellDef="let element"> {{element.obpm}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dbpm">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DBPM </th>
+        <td mat-cell *matCellDef="let element"> {{element.dbpm}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="bpm">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> BPM </th>
+        <td mat-cell *matCellDef="let element"> {{element.bpm}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vorp">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> VORP </th>
+        <td mat-cell *matCellDef="let element"> {{element.vorp}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="usg">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> USG%</th>
+        <td mat-cell *matCellDef="let element"> {{element.usg}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 15, 20, 50, 100, 600]"
+                 showFirstLastButtons>
+  </mat-paginator>
+</div>

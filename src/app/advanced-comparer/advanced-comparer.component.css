@@ -1,0 +1,22 @@
+.card1 {
+    /* margin-left: 40%; */
+    text-align: center;
+    margin-bottom: 6%;
+    margin-top: 5%;
+ }
+ .card2 {
+    /* margin-left: 20%; */
+    text-align: center;
+    margin-bottom: 6%;
+    margin-top: 5%;
+ }
+ .player-img {
+    height: 400px;
+ }
+ 
+ .compare-btn {
+    margin-bottom: 10%;
+    margin-left: 48%;
+ 
+    margin-top: 4%;
+ }

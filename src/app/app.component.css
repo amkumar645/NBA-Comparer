@@ -1,0 +1,14 @@
+.nav-link {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.footer {
+    background-color: white;
+    padding: 5%;
+    color: white;
+    text-align: center;
+}
+.icon {
+    height: 50px;
+    margin-right: 10px;
+}
