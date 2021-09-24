@@ -29,6 +29,31 @@ mark {
     margin-top: 5%;
 }
 
+.contact-box {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 80%;
+    height: 20%;
+}
+
+.contact-btn {
+    margin-top: 3%;
+    text-align: center;
+}
+
+.contact-description {
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-right: 30%;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+}
+
 .contact-section {
     background-color:#39A2DB;
     height: 80%;

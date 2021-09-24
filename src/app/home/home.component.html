@@ -46,6 +46,17 @@
         </div>
     </div>
     <div class="contact-section">
-        <h1 class="contact-text">Questions?</h1>
+        <h1 class="contact-text">Questions? Suggestions?</h1>
+        <p class="contact-description">If you see any bugs, have any suggestions on how to improve the site,
+            or just want to know how the implementation of any feature works, let me know in the box below!
+        </p>
+        <textarea class="contact-box" [(ngModel)]="email_info">
+
+        </textarea>
+        <div class="contact-btn">
+            <button class="btn btn-lg btn-dark"><a class="contact-link" 
+                href="mailto:aforarnav@yahoo.com?subject=Comment About NBA Comparer&body={{email_info}}">
+                Submit</a></button>
+        </div>
     </div>
 </div>
