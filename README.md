@@ -1,27 +1,28 @@
-# SportsComparer
+NBA Comparer
+Files included are all Angular 12 files, images, and datasets used to create NBA Comparer Website.
+The website contains of several sections:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+Navigation bar and footer on each page: 
+- Routes to different sections of website
 
-## Development server
+Home page: 
+- Contains short description of each page and buttons that route to each section of website
+- Contact sections where users can send emails to me about any suggestions/questions/bugs for site
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+About page:
+- Contains longer descriptions of features in comparer section and historical statistics section
 
-## Code scaffolding
+Comparer page:
+- Form to choose two players
+- Comparing interface after players selected with checkmarks for player with better individual statistic
+- Ability to change season for each player to compare season-by-season
+- Ability to expand to advanced statistics like PER, WS, VORP, etc.
+- Ability to change to adjusted statistics comparer, which uses standardized and rescaled data to compare players
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Historical page:
+- Table showing all statistics in dataset
+- Ability to change year to see different seasons
+- Ability to sort table by any statistic
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Prediction page:
+- In progress
