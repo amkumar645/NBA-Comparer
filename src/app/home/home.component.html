@@ -1,4 +1,4 @@
-<div class="home-page">
+<div *ngIf="!medium" class="home-page">
     <h1 class="home-text"><mark>Compare your favorite players in seconds</mark></h1>
     <div class="home-btn">
         <button class="home-btn-2" (click)="scroll(other)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
@@ -55,8 +55,16 @@
         </textarea>
         <div class="contact-btn">
             <button class="btn btn-lg btn-dark"><a class="contact-link" 
-                href="mailto:aforarnav@yahoo.com?subject=Comment About NBA Comparer&body={{email_info}}">
+                href="mailto:arnavkumar01@yahoo.com?subject=Comment About NBA Comparer&body={{email_info}}">
                 Submit</a></button>
         </div>
     </div>
+</div>
+
+
+<div *ngIf="medium" class="too-small">
+    <h2 class="small-txt">
+        This website is optimized for larger screens! Please expand your window or switch
+        to a device with a larger screen. Thanks!
+    </h2>
 </div>

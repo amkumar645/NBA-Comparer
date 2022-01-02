@@ -1,6 +1,6 @@
-<p class="adjusted-link"><a (click)="onAdjusted()">{{link}}</a></p>
-<h1 class = "tot-title">{{title}}</h1>
-<div class="row">
+<p *ngIf="!medium" class="adjusted-link"><a (click)="onAdjusted()">{{link}}</a></p>
+<h1 *ngIf="!medium" class = "tot-title">{{title}}</h1>
+<div *ngIf="!medium" class="row">
     <div class="column column1 col-xs-12 col-md-6">
         <button mat-icon-button class="tot-btn btn-1" (click)="onYear1('left')"><mat-icon>arrow_left</mat-icon></button>
         <span class="words">{{currentYear1}}</span>
@@ -11,6 +11,12 @@
         <span class="words">{{currentYear2}}</span>
         <button mat-icon-button class="tot-btn" (click)="onYear2('right')"><mat-icon>arrow_right</mat-icon></button>
     </div>
+</div>
+<div *ngIf="medium" class="too-small">
+    <h2 class="small-txt">
+        This website is optimized for larger screens! Please expand your window or switch
+        to a device with a larger screen. Thanks!
+    </h2>
 </div>
 <app-comparer *ngIf="!adjusted" [player1]="player1Full" [player2]="player2Full"></app-comparer>
 <app-advanced-comparer *ngIf="adjusted" [player1]="player1Full" [player2]="player2Full"></app-advanced-comparer>

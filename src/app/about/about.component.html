@@ -1,4 +1,4 @@
-<div class="feature">
+<div *ngIf="!medium" class="feature">
     <div class="row">
         <div class="column1">
             <img class="img-1" src="assets/Comparison.png">
@@ -15,14 +15,14 @@
     </div>
 </div>
 
-<div class="feature white">
+<div *ngIf="!medium" class="feature white">
     <div class="row">
         <div class="column2">
             <h1 class="section-title">Adjusted Statistics Comparer</h1>
             <h3 class="section-text">
                 To better compare players from different time periods, the adjusted statistics comparer 
                 standardizes each player's season statistics based on the year's averages and then rescales
-                based on 2020 statistics, so now you can compare any two players as if they played together.
+                based on 2020 statistics, so now you can compare any two players as if they played together in 2020.
             </h3>
         </div>
         <div class="column1">
@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div class="feature">
+<div *ngIf="!medium" class="feature">
     <div class="row">
         <div class="column1">
             <img class="img-3" src="assets/historical.png">
@@ -47,7 +47,7 @@
     </div>
 </div>
 
-<div class="feature white">
+<div *ngIf="!medium" class="feature white">
     <div class="row">
         <div class="column2">
             <h1 class="section-title">Statistic Predictor (Coming Soon)</h1>
@@ -61,4 +61,21 @@
             <img class="img-4" src="assets/coming-soon.jpg">
         </div>
     </div>
+</div>
+
+<div *ngIf="!medium" class="feature feature-2">
+    <h1 class="section-title-2 white-text">About Me</h1>
+    <h2 class="section-text-2 white-text">
+        I'm a current college undergraduate with an interest in software engineering
+        and a love of sports statistics. This is my first time making a website, so feel free to send me
+        any advice through the home page and be patient with the look and formatting of the website. Thanks
+        and I hope you enjoy!
+    </h2>
+</div>
+
+<div *ngIf="medium" class="too-small">
+    <h2 class="small-txt">
+        This website is optimized for larger screens! Please expand your window or switch
+        to a device with a larger screen. Thanks!
+    </h2>
 </div>

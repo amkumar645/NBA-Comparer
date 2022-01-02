@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { PlayerInfo, PlayerStats } from '../nbaPlayers';
 import { PlayerService } from '../services/player.service';
 
@@ -18,6 +18,10 @@ export class TotalComparerComponent implements OnInit {
   player2Full!: PlayerStats;
   nbaPlayerStats: PlayerStats[] = this.playerService.getAllPlayersStats();
   adjusted = false;
+  public getScreenWidth: any;
+  public getScreenHeight: any;
+  medium = false;
+
   constructor(private playerService: PlayerService) { }
 
   ngOnInit(): void {
@@ -36,6 +40,22 @@ export class TotalComparerComponent implements OnInit {
       return (v["name"].startsWith(this.player2.name)
              && v["year"] == this.currentYear2);
     })[0];
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+    if (this.getScreenWidth <= 1200 || this.getScreenHeight <= 600)
+      this.medium = true;
+    else
+      this.medium = false;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+    if (this.getScreenWidth <= 1200 || this.getScreenHeight <= 600)
+      this.medium = true;
+    else
+      this.medium = false;
   }
 
   onYear1(direction: string) {
